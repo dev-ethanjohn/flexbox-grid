@@ -199,24 +199,21 @@ input::-moz-focus-inner {
 
 /* We start writing out flexbox here. The above is just page setup */
 .container {
-  flex-wrap: wrap;
   display: flex;
 }
 
 .box {
-  /* The flex property makes all flex items grow and shrink equally. */
-  /* flex: [flex-grow] [flex-shrink] [flex-basis];
- */
-  /* Default is `flex: 0 1 auto;` which means items do not grow but shrink if needed. */
-  /* `flex: 1;` ensures equal distribution of available space among children. */
+  /* Default behavior (size based on content). */
+  /*  Defines how much an item should grow when extra space is available. */
+  flex-grow: 0;
+  /*  Defines how much an item should shrink when there’s not enough space. */
+  flex-shrink: 1;
+
+  /* Defines the initial size of the item before growth/shrinkage. auto means the size of the content */
+  flex-basis: auto;
+
   flex: 1;
 }
 
-.box2 {
-  /* twice the size of other flex 1 */
-  flex: 2;
-}
-
-.box5 {
-  flex: 3;
-}
+/* .box1 {
+} */
