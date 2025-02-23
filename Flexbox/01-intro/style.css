@@ -202,5 +202,16 @@ input::-moz-focus-inner {
   /* by default, a flex container is a block, we can limit the width to only = sum(children's width) by using `inline-flex` */
   display: flex;
   border: 10px solid goldenrod;
-  height: 100dvh;
+  min-height: 100dvh;
+
+  /* `row` is default  */
+  flex-direction: column;
+
+  /* for ROWS - main-axis is horizontal, cross axis is vertical  */
+  /* for COLUMNS - main axist is vertical, cross axis is horizontal */
+  align-items: center; /*horizontally aligns items. For rows, this align items works from top to bottom.*/
 }
+
+/* .box {
+  width: 100%;
+} */
